@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import { ExampleComponent } from 'components'
+import { ExampleComponent,ToastComponent } from 'components'
 import 'components/dist/index.css'
 
+
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const [random,setRandom] = useState("")
+
+
+
+  return (<>
+          <button onClick={() => setRandom(Math.random())}>soemthing</button>
+            <ToastComponent text={random} />
+          </>)
 }
 
 export default App
