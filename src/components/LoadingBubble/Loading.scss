@@ -1,0 +1,44 @@
+.dot {
+    display: flex;
+    justify-content: space-around;
+    max-width: 50%;
+    padding-top: 10px;
+    margin: auto;
+    span {
+      display: inline-block;
+      height: 20px;
+      width: 20px;
+      background-color: red;
+      border-radius: 50%;
+      animation: mymove 2s infinite;
+    }
+    .color-1 {
+      background-color: #282f44;
+      animation-delay: 0.25s;
+    }
+    .color-2 {
+      background-color: #453a49;
+      animation-delay: 0.5s;
+    }
+    .color-3 {
+      background-color: #6d3b47;
+      animation-delay: 0.75s;
+    }
+    .color-4 {
+      background-color: #ba2c73;
+      animation-delay: 1s;
+    }
+  }
+  
+  @keyframes mymove {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(2, 2);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  
