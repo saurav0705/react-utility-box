@@ -1,25 +1,42 @@
 import React, { useState } from 'react'
 
-import { ToastComponent,LoadingComponentNeo,LoadingComponentBubble,LoadingComponentText,DeleteComponentShredder } from 'components'
+import {
+  ToastComponent,
+  LoadingComponentNeo,
+  LoadingComponentBubble,
+  LoadingComponentText,
+  DeleteComponentShredder
+} from 'components'
 import 'components/dist/index.css'
 
-
 const App = () => {
-  const [random,setRandom] = useState("")
-  const [input,setInput] = useState("");
+  const [random, setRandom] = useState('')
+  const [input, setInput] = useState('')
 
-
-  return (<>
-          <div>
-            <input type="text" value={input} onChange={(e) => setInput(e.target.value)}/>
-            <button onClick={() => {setRandom(input);setInput("")}}>Toggle Toast</button>
-            </div>
-            <ToastComponent text={random} />
-            <LoadingComponentNeo/>
-            <LoadingComponentBubble/>
-            <LoadingComponentText text={"please wait.."}/>
-            <DeleteComponentShredder/>
-          </>)
+  return (
+    <>
+      <div>
+        <input
+          type='text'
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
+        <button
+          onClick={() => {
+            setRandom(input)
+            setInput('')
+          }}
+        >
+          Toggle Toast
+        </button>
+      </div>
+      <ToastComponent text={random} />
+      <LoadingComponentNeo />
+      <LoadingComponentBubble />
+      <LoadingComponentText text={'please wait..'} />
+      <DeleteComponentShredder />
+    </>
+  )
 }
 
 export default App
