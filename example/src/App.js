@@ -30,13 +30,17 @@ const App = () => {
           Toggle Toast
         </button>
       </div>
-      <ToastComponent text={random} />
-      <LoadingComponentNeo />
+      <ToastComponent
+        message={random}
+        time={10000}
+        styles={{ backgroundColor: 'red', color: 'yellow' }}
+      />
+      {/* <LoadingComponentNeo />
       <LoadingComponentBubble />
-      <LoadingComponentText text={'please wait..'} />
-      <DeleteComponentShredder />
+      <LoadingComponentText message={'please wait..'} />
+      <DeleteComponentShredder /> */}
     </>
   )
 }
-
+//9810614084
 export default App

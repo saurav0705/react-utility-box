@@ -1,13 +1,19 @@
 {
-  "name": "components",
-  "version": "1.0.0",
-  "description": "Made with create-react-library",
+  "name": "react-utility-box",
+  "version": "1.0.122",
+  "description": "Utility Component Library",
   "author": "saurav0705",
   "license": "MIT",
   "repository": "saurav0705/components",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
+  "keywords": [
+    "utility",
+    "loaders",
+    "toast",
+    "buttons"
+  ],
   "engines": {
     "node": ">=10"
   },

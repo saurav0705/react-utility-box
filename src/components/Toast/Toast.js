@@ -6,13 +6,23 @@ const Toast = (props) => {
   useEffect(() => {
     clearTimeout(recent)
     setShow(true)
-    recent = setTimeout(() => setShow(false), 2000)
+    recent = setTimeout(
+      () => setShow(false),
+      props.time === undefined || typeof props.time !== 'number'
+        ? 2000
+        : props.time
+    )
   }, [props.message])
 
   return (
     <div className={show ? '' : styles['fade-out']}>
       {props.message.toString().length > 0 ? (
-        <div className={styles.toast}>{props.message}</div>
+        <div
+          className={styles.toast}
+          style={props.styles === undefined ? {} : props.styles}
+        >
+          {props.message}
+        </div>
       ) : (
         <div></div>
       )}
