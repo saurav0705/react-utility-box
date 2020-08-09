@@ -3,10 +3,12 @@ import styles from './Loading.scss'
 
 const Loading = ({ message }) => {
   return (
-    <div class={styles['dot']}>
-      {(message === undefined ? 'loading' : message).split('').map((chr) => (
-        <span>{chr}</span>
-      ))}
+    <div className={styles.dot}>
+      {(message === undefined ? 'loading' : message)
+        .split('')
+        .map((chr, index) => (
+          <span key={`index-loader${index}`}>{chr}</span>
+        ))}
     </div>
   )
 }

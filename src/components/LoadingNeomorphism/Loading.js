@@ -1,14 +1,14 @@
-import React from 'react';
-import styles from './Loading.scss';
+import React from 'react'
+import styles from './Loading.scss'
 
 const Loading = () => {
-    return (
-        <div className={styles["loading"]}>
-            <div className={styles["bar"]}>
-                <i className={styles["sphere"]}></i>
-            </div>
-        </div>
-    );
-};
+  return (
+    <div className={styles.loading}>
+      <div className={styles.bar}>
+        <i className={styles.sphere} />
+      </div>
+    </div>
+  )
+}
 
-export default Loading;
+export default Loading

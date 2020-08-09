@@ -35,10 +35,10 @@ const App = () => {
         time={10000}
         styles={{ backgroundColor: 'red', color: 'yellow' }}
       />
-      {/* <LoadingComponentNeo />
+      <LoadingComponentNeo />
       <LoadingComponentBubble />
       <LoadingComponentText message={'please wait..'} />
-      <DeleteComponentShredder /> */}
+      <DeleteComponentShredder />
     </>
   )
 }
